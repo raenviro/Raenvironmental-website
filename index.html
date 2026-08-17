@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RAEnvironmental — Natural Asset Strategist. Transforming Natural Assets into Strategic Value." />
+  <title>RAEnvironmental | Natural Asset Strategist</title>
+  <style>
+    :root {
+      --ra-green: #1E4D2B;
+      --leaf-green: #6B8E23;
+      --cream: #F5F2E9;
+      --white: #FFFFFF;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; font-family: Arial, Helvetica, sans-serif; }
+    body { background: var(--ra-green); color: var(--white); }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background:
+        linear-gradient(90deg, rgba(11, 39, 22, .84) 0%, rgba(16, 49, 28, .66) 42%, rgba(16, 49, 28, .22) 72%, rgba(16, 49, 28, .12) 100%),
+        url('https://images.unsplash.com/photo-1687150486956-4dac433e543b?auto=format&fit=crop&fm=jpg&q=84&w=2400') center/cover no-repeat;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 5px;
+      background: var(--leaf-green);
+    }
+
+    header {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px clamp(24px, 6vw, 88px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .brand svg { width: 66px; height: 66px; flex: 0 0 auto; }
+    .brand-name { font-size: clamp(1.25rem, 2.2vw, 1.9rem); font-weight: 700; letter-spacing: .01em; line-height: 1; }
+    .brand-name span { color: #a6c756; }
+    .brand-tag { margin-top: 7px; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; opacity: .92; }
+
+    nav { font-size: .84rem; letter-spacing: .12em; text-transform: uppercase; }
+    nav a { color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.55); padding-bottom: 5px; }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 48px clamp(24px, 6vw, 88px) 90px;
+    }
+
+    .copy { max-width: 780px; }
+    .eyebrow {
+      display: inline-block;
+      font-size: clamp(.72rem, 1.1vw, .9rem);
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: #d6e8b0;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 760px;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(3rem, 7vw, 6.7rem);
+      font-weight: 500;
+      line-height: .96;
+      letter-spacing: -.035em;
+      text-wrap: balance;
+      text-shadow: 0 4px 18px rgba(0,0,0,.22);
+    }
+
+    h1 em { color: #c5da81; font-style: normal; }
+
+    .rule { width: 84px; height: 3px; background: var(--leaf-green); margin: 30px 0 25px; }
+
+    .lead {
+      max-width: 640px;
+      margin: 0;
+      font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+      line-height: 1.55;
+      color: rgba(255,255,255,.93);
+    }
+
+    .portfolio {
+      margin-top: 34px;
+      display: inline-flex;
+      gap: 12px;
+      align-items: center;
+      padding: 13px 17px;
+      border: 1px solid rgba(255,255,255,.35);
+      background: rgba(11,39,22,.28);
+      backdrop-filter: blur(3px);
+      font-size: .83rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .portfolio b { color: #c5da81; }
+
+    .photo-credit {
+      position: absolute;
+      z-index: 2;
+      right: 22px;
+      bottom: 16px;
+      font-size: .67rem;
+      opacity: .65;
+    }
+
+    .photo-credit a { color: white; text-decoration: none; }
+
+    @media (max-width: 720px) {
+      header { padding-top: 20px; }
+      nav { display: none; }
+      .brand svg { width: 52px; height: 52px; }
+      .content { align-items: flex-end; padding-bottom: 76px; }
+      .hero {
+        background-position: 58% center;
+        background-image:
+          linear-gradient(180deg, rgba(12,40,23,.55) 0%, rgba(12,40,23,.30) 34%, rgba(12,40,23,.86) 100%),
+          url('https://images.unsplash.com/photo-1687150486956-4dac433e543b?auto=format&fit=crop&fm=jpg&q=82&w=1400');
+      }
+      h1 { font-size: clamp(3.1rem, 15vw, 5rem); }
+      .lead { font-size: 1rem; }
+      .portfolio { font-size: .7rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <header>
+      <a class="brand" href="#" aria-label="RAEnvironmental home">
+        <svg viewBox="0 0 120 120" role="img" aria-label="RAEnvironmental zebra emblem">
+          <g fill="none" stroke="#F5F2E9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M27 91c5-21 7-39 3-55 11 4 19 11 23 22 3-16 12-27 27-34-3 14-2 25 5 35 7 10 8 22 2 33"/>
+            <path d="M36 39l-9-14M77 31l9-15M40 58c8 4 16 4 23 0M42 72c10 5 20 5 30 0M38 85c12 6 25 6 38 0"/>
+          </g>
+          <path d="M48 42c4 8 6 16 5 24M62 39c-2 9-1 17 3 25M52 77c5 2 10 2 15 0" fill="none" stroke="#A6C756" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+        <div>
+          <div class="brand-name">RA<span>Environmental</span></div>
+          <div class="brand-tag">Natural Asset Strategist</div>
+        </div>
+      </a>
+      <nav><a href="mailto:rory@raenvironmental.co.za">Contact</a></nav>
+    </header>
+
+    <section class="content">
+      <div class="copy">
+        <div class="eyebrow">Strategic Natural Asset Portfolio</div>
+        <h1>Transforming Natural Assets into <em>Strategic Value.</em></h1>
+        <div class="rule"></div>
+        <p class="lead">We identify the natural assets of a property, evaluate their potential and develop a strategy for their economic benefit.</p>
+        <div class="portfolio"><b>Natural assets</b> · Strategic thinking · Economic value</div>
+      </div>
+    </section>
+
+    <div class="photo-credit">Photo: <a href="https://unsplash.com/photos/lgseDE55DTI">Ryan Cuerden / Unsplash</a></div>
+  </main>
+</body>
+</html>
